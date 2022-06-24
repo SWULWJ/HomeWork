@@ -1,0 +1,46 @@
+html{
+    background-image: linear-gradient(to bottom right,mediumpurple,greenyellow);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+}
+div.loginBox{
+    background-image: linear-gradient(to bottom left,mediumpurple,greenyellow);
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    width: 25%;
+    height: 25%;
+    margin: 200px auto auto;
+    border-radius: 25px;
+    padding: 30px 20px 30px 20px;
+    box-shadow: 10px 10px 40px grey;
+}
+button{
+    border:0;
+    margin-top:15px;
+    width:120px;
+    height:25px;
+    color:#ffffff;
+    border-radius: 20px;
+    background: linear-gradient(to bottom right,mediumpurple,greenyellow);
+    background-blend-mode: multiply,multiply;
+}
+p, h1{
+    color: white;
+    opacity: 0.75;
+}
+input
+{
+    height: 25px;
+    border-radius: 20px;
+    border-width: 0;
+}
