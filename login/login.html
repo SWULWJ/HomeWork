@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 引入vue -->
+		<script src="vue.js"></script>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<!-- 引入组件库 -->
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	</head>
+	<body>
+		<el-row>
+			<el-row>
+			  <el-col :span="24">
+					<div class="grid-content bg-purple-dark" style="height: 75px;width: 500px;margin:0 auto;">
+						<div class="icon" style="margin-left: 55px;">
+							<i class="el-icon-user" style="font-size: 25px;margin-left: 100px;"></i>
+						</div>
+						<div class="txt" style="margin-left: 100px;	width: 200px;height: 100px;">
+							<p class="MicrosoftYahei" style="text-align: center;font-size: 20px;">学生宿舍管理系统</p>
+						</div>
+					</div>
+				  </el-col>
+			</el-row>
+		</el-row>
+		<el-row>
+			<el-col :span="12">
+				<div class="grid-content bg-purple" style="width:500px;height: 220px;margin:0 auto;">
+					<div class="icon" style="margin-left: 35px;">
+						<i class="el-icon-user-solid" style="font-size: 25px;margin-left: 75px;"></i>
+					</div>
+					<div class="txt" id="app-input-username" style="margin: 100px;">
+						<el-input placeholder="请输入用户名" v-model="input" clearable></el-input>
+					</div>	
+				</div>
+			</el-col>
+		</el-row>
+		<el-row>
+			<el-col :span="12">
+				<div class="grid-content bg-purple-dark" style="width:500px;height: 220px;margin:0 auto;">
+					<div class="icon" style="margin-left: 35px;">
+						<i class="el-icon-user-solid" style="font-size: 25px;margin-left: 75px;"></i>
+					</div>
+					<div class="txt" id="app-input-passwd" style="margin: 100px;">
+						<el-input placeholder="请输入密码" v-model="input" show-password></el-input>
+					</div>	
+				</div>
+			</el-col>
+		</el-row>
+	</body>
+</html>
+
+<style>
+  .el-row {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+  }
+  .row-bg {
+    padding: 10px 0;
+    background-color: #f9fafc;
+  }
+</style>
+
+<style type="text/css">
+	p.PingFang{font-family:PingFang SC;}
+	p.MicrosoftYahei{font-family:微软雅黑;}
+</style>
+
+<style type="text/css">
+	div.icon{
+		width: 25px;
+		height: 25px;
+		display: inline-block;
+	}
+	div.txt{
+		display: inline-block;
+	}
+</style>
+
+<script>
+	var Main = {
+	    data() {
+	      return {
+	        input: ''
+	      }
+	    }
+	  }
+	var Ctor = Vue.extend(Main)
+	new Ctor().$mount('#app-input-username')
+</script>
+
+<script>
+var Main = {
+    data() {
+      return {
+        input: ''
+      }
+    }
+  }
+	var Ctor = Vue.extend(Main)
+	new Ctor().$mount('#app-input-passwd')
+</script>
