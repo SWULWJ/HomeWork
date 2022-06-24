@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+
+div {
+	position: absolute;
+	left: 50%;
+}
+#title {
+	z-index: 1;
+	top: 10%;
+	margin-left: -282px;
+}
+
+#cur {
+	z-index: 2;
+	width: 300px;
+	margin-left: -150px;
+	top: 20%
+}
+
+#hit {
+	z-index: 2;
+	top:92%;
+	width: 340px;
+	margin-left: -170px;
+}

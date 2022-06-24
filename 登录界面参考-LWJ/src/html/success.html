@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>注册成功</title>
+<link rel="stylesheet" href="../css/success.css">
+<script type="text/javascript">    
+　　 function countDown(secs,surl){        
+ 　　　　var jumpTo = document.getElementById('jumpTo');
+ 　　　　jumpTo.innerHTML=secs; 
+ 　　　　if(--secs>0){    
+     　　　　setTimeout("countDown("+secs+",'"+surl+"')",1000);    
+     　　}    
+ 　　　　else{      
+     　　　　location.href=surl;
+     　　}    
+ 　　}    
+</script>
+</head>
+<body>
+<div id="title">
+    <img src="../images/ico.png" alt="凤凰商城" />
+    </div>
+<div id="cur">
+    <h1 align="center">注册成功</h1>
+</div>
+<div id="hit">
+    <p align="center"> <a href="register_demo/index.html"><span id="jumpTo" align="center">3</span>秒后系统会自动跳转，也可点击此处直接跳转</a></p>
+</div>
+<script type="text/javascript">
+    countDown(3,'../../index.html');
+</script>
+</body>
+</html>
