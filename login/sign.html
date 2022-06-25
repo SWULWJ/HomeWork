@@ -19,7 +19,7 @@
 				</el-col>
 			</el-row>
 			<el-row>
-				<div class="grid-content bg-purple" style="width: 500px;margin: 0 auto;">
+				<div class="grid-content bg-purple" style="width: 500px;margin: 0 auto;height: 430px;">
 					<el-col :span="12">
 						<div class="grid-content bg-purple" style="width: 500px;height: 90px;margin: 0 auto;" id="app-input">
 							<i style="font-size: 35px;margin-left: 75px;margin-top: 15px;" class="el-icon-user"></i>
@@ -75,7 +75,7 @@
 						  <el-button type="primary" style="margin-left: 150px;">注册</el-button>
 					</div>
 					<div id="app-botton-sign" class="botton">
-						  <el-button style="margin-left: 50px;">已有账号？登录</el-button>
+						  <el-button style="margin-left: 50px;" onclick="JumpToLogin()">已有账号？登录</el-button>
 					</div>
 		</body>
 	</html>
@@ -180,3 +180,11 @@
 	<script>
 		new Vue().$mount('#app-botton-sign')
 	</script>
+	
+	<script>
+		function JumpToLogin(){
+			window.location.href="login2.html";
+		}
+	</script>
+	
+	
