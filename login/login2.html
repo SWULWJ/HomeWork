@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>用户登录</title>
+		<!-- 引入vue -->
+		<script src="//unpkg.com/vue@2/dist/vue.js"></script>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<!-- 引入组件库 -->
+		<script src="//unpkg.com/element-ui@2.15.8/lib/index.js"></script>
+	</head>
+	<body>
+		<el-row style="width: 500px;">
+			<el-col :span="24">
+				<div class="grid-content bg-purple-dark" style="width: 500px;height: 70px;margin: 0 auto;">
+					<p style="font-size: 25px;"><i class="el-icon-folder-opened" style="font-size: 35px;margin: 15px;margin-left: 150px;">&nbsp;</i>登录系统</p>
+				</div>
+			</el-col>
+		</el-row>
+		<el-row>
+			<div class="grid-content bg-purple" style="width: 500px;margin: 0 auto;">
+				<el-col :span="12">
+					<div class="grid-content bg-purple" style="width: 500px;height: 90px;margin: 0 auto;" id="app-input">
+						<i style="font-size: 35px;margin-left: 75px;margin-top: 15px;" class="el-icon-user"></i>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<el-input
+						  placeholder="请输入用户名"
+						  v-model="input"
+						  clearable
+						  style="margin-left: 10px;width: 250px;">
+						</el-input>
+					</div>
+				</el-col>
+				<el-col :span="12">
+					<div class="grid-content bg-purple" style="width: 500px;height: 90px;margin: 0 auto;" id="app-input-passwd">
+						<i style="font-size: 35px;margin-left: 75px;margin-top: 15px;" class="el-icon-lock"></i>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<el-input
+						  placeholder="请输入密码"
+						  v-model="input"
+						  show-password
+						  style="margin-left: 10px;width: 250px;">
+						</el-input>
+					</div>
+				</el-col>
+				<el-col :span="12">
+					<div class="grid-content bg-purple" style="width: 500px;height: 90px;margin: 0 auto;" id="app-select">
+						<i style="font-size: 35px;margin-left: 75px;margin-top: 15px;" class="el-icon-setting"></i>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						  <el-select v-model="value" placeholder="请选择身份">
+						    <el-option
+						      v-for="item in options"
+						      :key="item.value"
+						      :label="item.label"
+						      :value="item.value"
+							  style="width: 250px;">
+						    </el-option>
+						  </el-select>
+					</div>
+				</el-col>
+				<div id="app-botton-login" class="botton">
+					  <el-button type="primary" style="margin-left: 150px;">登录</el-button>
+				</div>
+				<div id="app-botton-sign" class="botton">
+					  <el-button style="margin-left: 50px;">没有账号？注册</el-button>
+				</div>
+	</body>
+</html>
+
+<style>
+	.el-row {
+	  margin-bottom: 20px;
+	  &:last-child {
+	    margin-bottom: 0;
+	  }
+	}
+	.el-col {
+	  border-radius: 4px;
+	}
+	.bg-purple-dark {
+	  background: #99a9bf;
+	}
+	.bg-purple {
+	  background: #d3dce6;
+	}
+	.bg-purple-light {
+	  background: #e5e9f2;
+	}
+	.grid-content {
+	  border-radius: 4px;
+	  min-height: 36px;
+	}
+	.row-bg {
+	  padding: 10px 0;
+	  background-color: #f9fafc;
+	}
+</style>
+
+<style>
+	div.botton{
+		display: inline-block;
+	}
+</style>
+
+<script>
+	var thisinput = {
+	    data() {
+	      return {
+	        input: ''
+	      }
+	    }
+	  }
+	var Ctor = Vue.extend(thisinput)
+	new Ctor().$mount('#app-input')
+</script>
+
+<script>
+	var Main = {
+	    data() {
+	      return {
+	        input: ''
+	      }
+	    }
+	  }
+	var Ctor = Vue.extend(Main)
+	new Ctor().$mount('#app-input-passwd')
+</script>
+
+<script>
+	var Main = {
+	    data() {
+	      return {
+	        options: [{
+	          value: '选项1',
+	          label: '管理员'
+	        }, {
+	          value: '选项2',
+	          label: '宿管'
+	        }, {
+	          value: '选项3',
+	          label: '学生'
+	        }],
+	        value: ''
+	      }
+	    }
+	  }
+	var Ctor = Vue.extend(Main)
+	new Ctor().$mount('#app-select')
+</script>
+
+<script>
+	new Vue().$mount('#app-botton-login')
+</script>
+
+<script>
+	new Vue().$mount('#app-botton-sign')
+</script>
