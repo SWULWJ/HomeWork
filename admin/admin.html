@@ -17,14 +17,15 @@
 					<el-menu :default-openeds="['1', '3']">
 						<el-submenu index="1">
 							<template slot="title">
-								<i class="el-icon-user"></i>学生管理
+								<i class="el-icon-house"></i>入住管理
 							</template>
 							<el-menu-item-group>
-								<template slot="title">学生管理</template>
-								<el-menu-item index="1-1">增加学生</el-menu-item>
-								<el-menu-item index="1-2">管理学生</el-menu-item>
-								<el-menu-item index="1-3">分配寝室</el-menu-item>
-								<el-menu-item index="1-4">批量导出/导入</el-menu-item>
+								<template slot="title">入住管理</template>
+								<el-menu-item index="1-1">旅客信息管理</el-menu-item>
+								<el-menu-item index="1-2">房间信息管理</el-menu-item>
+								<el-menu-item index="1-3">入住</el-menu-item>
+								<el-menu-item index="1-4">退宿</el-menu-item>
+								<el-menu-item index="1-5">批量导出/导入</el-menu-item>
 							</el-menu-item-group>
 						</el-submenu>
 						<el-submenu index="2">
@@ -32,34 +33,34 @@
 								<i class="el-icon-user-solid"></i>员工管理
 							</template>
 							<el-menu-item-group>
-								<template slot="title">宿管管理</template>
-								<el-menu-item index="2-1">增加宿管</el-menu-item>
-								<el-menu-item index="2-2">管理宿管</el-menu-item>
-								<el-menu-item index="2-3">分配宿管</el-menu-item>
-								<el-menu-item index="2-4">批量导出/导入</el-menu-item>
+								<template slot="title">员工管理</template>
+								<el-menu-item index="2-1">高级人员管理</el-menu-item>
+								<el-menu-item index="2-2">前台人员管理</el-menu-item>
+								<el-menu-item index="2-3">安保人员管理</el-menu-item>
+								<el-menu-item index="2-4">财务人员管理</el-menu-item>
+								<el-menu-item index="2-5">批量导出/导入</el-menu-item>
 							</el-menu-item-group>
 						</el-submenu>
 						<el-submenu index="3">
 							<template slot="title">
-								<i class="el-icon-office-building"></i>楼栋管理
+								<i class="el-icon-office-building"></i>物资管理
 							</template>
 							<el-menu-item-group>
-								<template slot="title">楼栋管理</template>
-								<el-menu-item index="3-1">增加楼栋</el-menu-item>
-								<el-menu-item index="3-2">管理楼栋</el-menu-item>
+								<template slot="title">物资管理</template>
+								<el-menu-item index="3-1">房间物资管理</el-menu-item>
+								<el-menu-item index="3-2">仓库物资管理</el-menu-item>
 								<el-menu-item index="3-3">批量导出/导入</el-menu-item>
 							</el-menu-item-group>
 						</el-submenu>
 						<el-submenu index="4">
 							<template slot="title">
-								<i class="el-icon-house"></i>寝室管理
+								<i class="el-icon-wallet"></i>财务管理
 							</template>
 							<el-menu-item-group>
-								<template slot="title">寝室管理</template>
-								<el-menu-item index="4-1">增加寝室</el-menu-item>
-								<el-menu-item index="4-2">管理寝室</el-menu-item>
-								<el-menu-item index="4-3">管理水电费</el-menu-item>
-								<el-menu-item index="4-4">批量导出/导入</el-menu-item>
+								<template slot="title">财务管理</template>
+								<el-menu-item index="4-1">收入管理</el-menu-item>
+								<el-menu-item index="4-2">支出管理</el-menu-item>
+								<el-menu-item index="4-3">批量导出/导入</el-menu-item>
 							</el-menu-item-group>
 						</el-submenu>
 					</el-menu>
@@ -77,15 +78,15 @@
 					</el-header>
 					<el-main>
 						<el-table :data="tableData">
-							<el-table-column prop="date" label="日期" width="140">
+							<el-table-column prop="ID" label="编号" width="140">
 							</el-table-column>
 							<el-table-column prop="name" label="姓名" width="120">
 							</el-table-column>
-							<el-table-column prop="address" label="地址" width='200'>
+							<el-table-column prop="building" label="楼栋" width='200'>
 							</el-table-column>
-							<el-table-column prop="shayemeiyou" label="还没写" width='200'>
+							<el-table-column prop="room" label="寝室" width='200'>
 							</el-table-column>
-							<el-table-column prop="shayemeiyou" label="还没写" width='200'>
+							<el-table-column prop="inDate" label="入住时间" width='200'>
 							</el-table-column>
 							<el-table-column prop="shayemeiyou" label="还没写" width='200'>
 							</el-table-column>
@@ -116,17 +117,26 @@
 		var Main = {
 			data() {
 				const item = {
-					date: '2022-6-25',
+					ID:'10086',
 					name: '张三',
-					address: '法外狂徒聚集地',
-					shayemeiyou:'啥也没有',
+					building: '橘园88舍',
+					room:'605',
+					inDate:'2019-1-1',
+					shayemeiyou:'还没写',
 				};
 				return {
-					tableData: Array(20).fill(item)
+					tableData: Array(50).fill(item)
 				}
 			}
 		};
 		var Ctor = Vue.extend(Main)
 		new Ctor().$mount('#app')
 	</script>
+	
+	<script>
+		function ToAddStudent(){
+			
+		}
+	</script>
+	
 </html>
